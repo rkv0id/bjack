@@ -1,0 +1,13 @@
+name: bjack
+version: 0.1.0
+
+authors:
+  - Rami Kader <ramy.kader.rk@gmail.com>
+
+targets:
+  bjack:
+    main: src/bjack.cr
+
+crystal: '>= 1.16.1'
+
+license: MIT
