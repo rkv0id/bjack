@@ -5,7 +5,8 @@
 
 A feature-rich, customizable blackjack game for the terminal built with Crystal.
 <div align="center">
-  <img src="./screenshots/gameplay-1.png" alt="BJack Gameplay" width="600"/>
+  <img src="./screens/gameplay-1.png" alt="BJack Gameplay" width="600"/>
+  <img src="./screens/gameplay-2.png" alt="BJack Gameplay" width="600"/>
   <p><i>BJack in action</i></p>
 </div>
 
