@@ -111,4 +111,4 @@ I have been thinking of adding a **multiplayer mode** and a **chat room**. But t
 This project is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
 ## Acknowledgements
-- Built with [Crystal](https://crystal-lang.org/):heart:, a statically-typed, compiled language with Ruby-like syntax
+- Built with [Crystal](https://crystal-lang.org/) :gem:, a statically-typed, compiled language with Ruby-like syntax
