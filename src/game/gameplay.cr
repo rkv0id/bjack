@@ -21,13 +21,13 @@ module Game
 
     private def update_status(message : String = "", current_bet : Int32 = 0) : Nil
       @status_message = message
-      if @config.clear_screen
+      if @config.clear_screen?
         Terminal.draw_status_dashboard(@bankroll, current_bet, @status_message)
       end
     end
 
     private def clear_screen : Nil
-      if @config.clear_screen
+      if @config.clear_screen?
         Terminal.clear
         Terminal.draw_status_dashboard(@bankroll, 0, @status_message)
       end
@@ -36,7 +36,7 @@ module Game
     private def display_cards(hand : Hand, title : String, hidden_index : Int32 = -1) : Nil
       puts Terminal.format_info(title)
 
-      if @config.use_ascii_cards
+      if @config.use_ascii_cards?
         hand_visual = Terminal::Hand.new(hand, hidden_index)
         puts hand_visual.to_ascii
         puts "Total: #{hand.best_total}" unless hidden_index != -1
@@ -59,7 +59,6 @@ module Game
     end
 
     private def ask_bet(side : Bool = false) : Int32
-      bet_type = side ? "side" : "main"
       min_bet = side ? @config.min_bet // 5 : @config.min_bet
       max_bet = side ? @config.max_bet // 5 : @config.max_bet
       max_allowed = [@bankroll, max_bet].min
@@ -78,7 +77,7 @@ module Game
           return 0
         end
 
-        return amount
+        amount
       else
         # Ensure we don't ask for a bet higher than the bankroll
         if min_bet > max_allowed
@@ -105,7 +104,7 @@ module Game
 
           if first_move
             options['d'] = "ouble" if @bankroll >= hand.bet
-            options['u'] = "surrender" if @config.surrender && split_count == 0
+            options['u'] = "surrender" if @config.surrender? && split_count == 0
 
             # Only allow splitting if we haven't exceeded max splits and have enough bankroll
             if hand.can_split? && split_count < @config.max_splits && @bankroll >= hand.bet
@@ -146,7 +145,7 @@ module Game
               break
             end
           when 'u'
-            if first_move && @config.surrender && split_count == 0
+            if first_move && @config.surrender? && split_count == 0
               half_bet = (hand.bet // 2)
               @bankroll += half_bet # Return half the bet
               puts Terminal.format_loss("You surrender. Lose $#{half_bet}.")
@@ -202,7 +201,7 @@ module Game
 
         # Dealer stands on hard 17+ and soft 17+ (unless hit_soft17 is true)
         break if total > 17
-        break if total == 17 && (!soft || !@config.hit_soft17)
+        break if total == 17 && (!soft || !@config.hit_soft17?)
 
         card = @deck.draw
         hand.add(card)
@@ -272,7 +271,7 @@ module Game
 
     # Main game loop
     def play : Nil
-      puts Terminal.format_info("Welcome to BustDust Classic Blackjack!")
+      puts Terminal.format_info("Welcome to BJACK Classic Blackjack!")
 
       if !Terminal.ask_yes_no("Start game?", @config)
         return
@@ -327,7 +326,7 @@ module Game
         # Store the side bet amount for later
 
         insurance_bet = 0
-        if @config.insurance && upcard.rank == "A" && @bankroll >= (main_bet // 2)
+        if @config.insurance? && upcard.rank == "A" && @bankroll >= (main_bet // 2)
           insurance_bet = main_bet // 2
           if Terminal.ask_yes_no("Buy insurance for $#{insurance_bet}?", @config)
             @bankroll -= insurance_bet
@@ -338,7 +337,7 @@ module Game
         end
 
         # Dealer peek
-        if @config.peek && (upcard.rank == "A" || ["10", "J", "Q", "K"].includes?(upcard.rank))
+        if @config.peek? && (upcard.rank == "A" || ["10", "J", "Q", "K"].includes?(upcard.rank))
           puts Terminal.format_info("Dealer peeks...")
           if dealer_hand.blackjack?
             puts Terminal.format_dealer("Dealer has Blackjack!")
@@ -370,7 +369,7 @@ module Game
         end
 
         # Dealer blackjack without peek
-        if dealer_hand.blackjack? && !@config.peek
+        if dealer_hand.blackjack? && !@config.peek?
           puts Terminal.format_dealer("Dealer has Blackjack!")
           display_cards(dealer_hand, "Dealer hand:")
 

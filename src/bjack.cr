@@ -42,13 +42,13 @@ Min Bet: $#{config.min_bet}
 Max Bet: $#{config.max_bet}
 Starting Cash: $#{config.cash}
 Number of Decks: #{config.num_decks}
-Peek Enabled: #{config.peek}
-Dealer Hits Soft 17: #{config.hit_soft17}
-Insurance Offered: #{config.insurance}
-Surrender Allowed: #{config.surrender}
+Peek Enabled: #{config.peek?}
+Dealer Hits Soft 17: #{config.hit_soft17?}
+Insurance Offered: #{config.insurance?}
+Surrender Allowed: #{config.surrender?}
 Blackjack Payout: #{config.blackjack_pay}
 Maximum Splits Allowed: #{config.max_splits}
-Double After Split Allowed: #{config.double_split}
+Double After Split Allowed: #{config.double_split?}
 
 TEXT
 )

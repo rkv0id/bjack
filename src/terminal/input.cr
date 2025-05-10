@@ -14,7 +14,7 @@ module Terminal
   end
 
   def ask_yes_no(prompt : String, config : Game::Config? = nil) : Bool
-    use_single_key = config && config.single_key_input
+    use_single_key = config && config.single_key_input?
 
     if use_single_key
       print Terminal.format_info("#{prompt} (y/n): ")
@@ -29,7 +29,7 @@ module Terminal
   end
 
   def ask_choice(prompt : String, options : Hash(Char, String), config : Game::Config? = nil) : Char
-    use_single_key = config && config.single_key_input
+    use_single_key = config && config.single_key_input?
 
     loop do
       # Format prompt
