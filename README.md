@@ -24,7 +24,7 @@ A feature-rich, customizable blackjack game for the terminal built with Crystal.
 - [Crystal](https://crystal-lang.org/install/)
 
 ### From Source
-You first need to install the [Crystal](https://crystal-lang.org/install/) programming language. It's a fun language, try it out.
+You first need to install the [Crystal](https://crystal-lang.org/install/) programming language :sweat_smile:. It's a fun language, try it out :shrug:.
 ```bash
 git clone https://github.com/yourusername/bjack.git
 cd bjack
