@@ -100,7 +100,7 @@ During gameplay, use the following keys:
 - `y/n` - Yes/No responses
 
 ## Contributing
-I have been thinking of adding a multiplayer mode and a chat room. But too lazy to get to it.
+I have been thinking of adding a **multiplayer mode** and a **chat room**. But too lazy to get to it.
 1. [Fork it](<https://github.com/rkv0id/bjack/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
@@ -111,4 +111,4 @@ I have been thinking of adding a multiplayer mode and a chat room. But too lazy 
 This project is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
 ## Acknowledgements
-- Built with [Crystal](https://crystal-lang.org/), a statically-typed, compiled language with Ruby-like syntax
+- Built with [Crystal](https://crystal-lang.org/):heart:, a statically-typed, compiled language with Ruby-like syntax
