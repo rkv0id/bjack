@@ -1,11 +1,11 @@
-# BJack - Terminal Blackjack Game
+# BJack - Blackjack CLI Game
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Crystal](https://img.shields.io/badge/Crystal-≥%201.16.1-black)
 
 A feature-rich, customizable blackjack game for the terminal built with Crystal.
 <div align="center">
-  <img src="./screens/gameplay-1.png" alt="BJack Gameplay" width="600"/>
+  <img src="./screens/gameplay-1.png" alt="BJack Game Style Menu" width="600"/>
   <img src="./screens/gameplay-2.png" alt="BJack Gameplay" width="600"/>
   <p><i>BJack in action</i></p>
 </div>
@@ -24,6 +24,7 @@ A feature-rich, customizable blackjack game for the terminal built with Crystal.
 - [Crystal](https://crystal-lang.org/install/)
 
 ### From Source
+Currently the game is only installable from source, until further update (don't count on it) you need to download [Crystal](https://crystal-lang.org/install/). It's a fun language, try it out.
 ```bash
 git clone https://github.com/yourusername/bjack.git
 cd bjack
