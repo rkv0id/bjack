@@ -20,9 +20,6 @@ A feature-rich, customizable blackjack game for the terminal built with Crystal.
 
 ## Installation
 
-### Prerequisites
-- [Crystal](https://crystal-lang.org/install/)
-
 ### From Source
 You first need to install the [Crystal](https://crystal-lang.org/install/) programming language :sweat_smile:. It's a fun language, try it out :shrug:.
 ```bash
@@ -49,7 +46,7 @@ The compiled binary will be available at `bin/bjack`.
 - Min bet: $10, Max bet: $500 by default (configurable)
 - Starting bankroll: $300 by default (configurable)
 
-### Advanced Features
+### Some Advanced Features
 - Split up to 3 hands (configurable)
 - Double down on any two cards
 - Insurance when dealer shows an Ace
@@ -103,7 +100,8 @@ During gameplay, use the following keys:
 - `y/n` - Yes/No responses
 
 ## Contributing
-1. Fork it (<https://github.com/yourusername/bjack/fork>)
+Been thinking of adding a multiplayer mode and a chat room. But too lazy to get to it.
+1. Fork it (<https://github.com/rkv0id/bjack/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
