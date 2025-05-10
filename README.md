@@ -100,8 +100,8 @@ During gameplay, use the following keys:
 - `y/n` - Yes/No responses
 
 ## Contributing
-Been thinking of adding a multiplayer mode and a chat room. But too lazy to get to it.
-1. Fork it (<https://github.com/rkv0id/bjack/fork>)
+I have been thinking of adding a multiplayer mode and a chat room. But too lazy to get to it.
+1. [Fork it](<https://github.com/rkv0id/bjack/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
