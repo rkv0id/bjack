@@ -23,7 +23,7 @@ A feature-rich, customizable blackjack game for the terminal built with Crystal.
 ### From Source
 You first need to install the [Crystal](https://crystal-lang.org/install/) programming language :sweat_smile:. It's a fun language, try it out :shrug:.
 ```bash
-git clone https://github.com/yourusername/bjack.git
+git clone https://github.com/rkv0id/bjack.git
 cd bjack
 shards build --release
 ```
